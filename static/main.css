@@ -1,13 +1,26 @@
+@font-face {
+    font-family: 'Y_Spotlight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Y_Spotlight", sans-serif;
+}
 .sec01{
     width: 100%;
     height: 700px;
-    background-color: #999;
+    background-image: url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/irugins/original/1638523250657_AdobeStock_369724463.png");
+    background-size: cover;
 }
 
-.sec01 .sec01__header{
+
+.sec01 .sec01__header {
     width: 100%;
     height: 110px;
-    background-color: #fff;
+
+
 
     position: fixed;
     left: 0;
@@ -16,31 +29,55 @@
     display: flex;
     flex-direction: row;
 
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+}
+.sec01 .sec01__header:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .sec01 .sec01__header .sec01__header__left,
 .sec01 .sec01__header .sec01__header__right{
     width: calc((100% - 1350px) / 2);
     height: 100%;
-    background-color: brown;
 }
 
 .sec01 .sec01__header .sec01__header__content{
     width: 1350px;
     height: 100%;
-    background-color: bisque;
 }
 
 .shc__top{
     width: 100%;
     height: 30px;
-    background-color: aqua;
+
+    border-bottom: 1px solid rgb(240, 190, 150);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.shc__top article {
+    color : rgb(100, 55, 40);
+    padding: 0px 9px;
 }
 .shc__bottom{
     width: 100%;
     height: 80px;
-    background-color:powderblue;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.shc__bottom li {
+    font-size: 19px;
+}
+
 
 .sec02{
     width: 100%;
