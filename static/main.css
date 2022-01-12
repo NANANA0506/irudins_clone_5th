@@ -74,8 +74,43 @@ body {
     justify-content: space-between;
 }
 
-.shc__bottom li {
+@keyframes menuView {
+    0% {
+        width: 0%;
+    } 
+    100% {
+        width: 100%;
+    }
+}
+
+.shc__bottom .sch__bottom__menu {
     font-size: 19px;
+    position: relative;
+    cursor: pointer;
+}
+
+.shc__bottom .sch__bottom__menu::before {
+    display: none;
+    content: "";
+    width: 100%;
+    border-bottom: 3px solid rgb(100, 55, 40);
+
+    position: absolute;
+    left: 0px;
+    bottom: -29px;
+    animation: menuView 0.8s forwards;
+}
+
+.shc__bottom .sch__bottom__menu:hover::before{
+    display: block;
+}
+
+.sch__bottom__first {
+    width: 158px;
+    height: 77px;
+    background-image: url("https://4leaf-s3.s3.ap-northeast-2.amazonaws.com/irugins/assets/images/logo/logo.png");
+    background-repeat: no-repeat;
+    margin-top: 13px;
 }
 
 
