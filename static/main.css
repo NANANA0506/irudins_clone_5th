@@ -123,12 +123,19 @@ body {
 .sec02 .sec02__top{
     width: 100%;
     height: 120px;
-    background-color: blue;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    color: rgb(60, 50, 30);
+    font-weight: 700;
 }
 .sec02 .sec02__bottom{
     width: 100%;
     height: 480px;
-    background-color: royalblue;
 
     display: flex;
     flex-direction: row;
@@ -136,12 +143,26 @@ body {
     justify-content: space-around;
 }
 
-.sec02 .sec02__bottom .sec02__bottom__box{
+.sec02 .sec02__bottom .sec02__bottom__box {
     width: 280px;
     height: 380px;
-    background-color: bisque;
+
 }
 
+.sec02 .sec02__bottom .sec02__bottom__box img {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 5px;
+    object-fit: cover;
+
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.sec02 .sec02__bottom .sec02__bottom__box img:hover {
+    opacity: 0.7;
+}
+ 
 
 
 .sec03{
@@ -163,3 +184,55 @@ body {
     height: 100%;
     background-color: olive;
 }
+
+@keyframes menuItemViewAnimation {
+    0% {
+        opacity: 0;
+    } 
+    100% {
+        opacity: 0.9;
+    }
+}
+
+.sch__bottom__menu .menu__hover__box {
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: -50px;
+
+    width: 170px;
+    height: 240px;
+    
+    background-color: rgba(255, 250, 250, 0.9);
+    animation: menuItemViewAnimation 0.8s forwards;
+}
+
+.sch__bottom__menu .menu__hover__box2 {
+    display: none;
+    position: absolute;
+    top: 26px;
+    left: -50px;
+
+    width: 170px;
+    height: 280px;
+
+    background-color:rgba(255, 250, 250, 0.9);
+    animation: menuItemViewAnimation 0.8s forwards;
+}
+
+.category:hover .menu__hover__box {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.csc:hover .menu__hover__box2 {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
